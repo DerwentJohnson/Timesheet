@@ -54,9 +54,9 @@ function SendToServer(username, password){
     xhr.onload = function(){
         let errorMessage = document.getElementById('passwordError');
         if (this.status == 200){ //handle return message from server.
-        console.log(this.responseText);
-
+            window.location = this.responseURL
         }
+        
     }
     xhr.send(userData);
 }

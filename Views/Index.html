@@ -4,25 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="Views/CSS/Login.css">
-    <script src="Views/scripts/Login.js"></script>
-    <title>Vertis TimeSheet</title>
+    <link rel="stylesheet" type="text/css" href="CSS/timesheet.css">
+    <script type="text/javascript" src="scripts/timesheet.js"></script>
+    <title>Document</title>
 </head>
 <body>
-    <div id="Navbar">
-        <h1>TimeSheet</h1>
+    <div class="body_container">
+        <div id="Navbar">
+            <h1>TimeSheet</h1>
+            <ul>
+                <li><a id="home" type="button">Home</a></li>
+                <li><a id="clients" type="button">Clients</a></li>
+                <li><a id="logout" type="button">logout</a></li>
+            </ul>
+        </div>
+        <div id="flex-container">
+            <div id="container">
+                <div id="userdata">
+                    <div>Employee name: <span id="userName"></span></div>
+                    <div>Employee ID: <span id="user_id"></span></div>
+                    <div>Project name: <span id="projectName"></span></div>
+                    <div>Total Hours worked: <span id="workHrs"></span></div>
+                </div>
+                <div >
+                    <form id="timesheetForm">
+                        <div class="wrapper">
+                            <div class="input_item">
+                                <label for="work_date">Date</label>
+                                <input type="date"  id="work_date">
+                                </div>
+                                <div class="input_item">
+                                    <label for="startTimeInput">Start time:</label>
+                                    <input id="startTimeInput" type="time" >
+                                </div>
+                                <div class="input_item">
+                                    <label for="endTimeInput">End time:</label>
+                                    <input id="endTimeInput" type="time">
+                                </div>
+                                <div class="input_item">
+                                    <label for="BreakTimeInInput">Break time start:</label>
+                                <input id="BreakTimeInInput" type="time">
+                                </div>
+                                <div class="input_item">
+                                    <label for="BreakTimeOutInput">Break time end:</label>
+                                    <input id="BreakTimeOutInput" type="time">
+                                </div>
+                        </div>
+                        <div class="texarea_item">
+                            <label for="SessionComment">Comments:</label>
+                            <textarea id="SessionComment" cols="40" rows="10"></textarea>
+                        </div>
+                        <button id="timesheetSubmit" type="submit">Submit</button>
+                    </form>
+                </div>
 
-    </div>
-
-    <div id="container">
-        <header id="loginHeader">Login</header>
-        <form id="loginForm">
-            <input class="loginInput" type="text" id="username" placeholder="Enter username">
-            <div id="usernameError"></div>
-            <input class="loginInput" type="password" id="userpassword" placeholder="Enter password">
-            <div id="passwordError"></div>
-            <button type="submit" id="loginButton">Login</button>
-        </form>
-    </div>
+                <div id="timesheet">
+                    <table id="timesheetTable">
+                        <tr>
+                            <th id="date">Date</th>
+                            <th id="startTime">Start Time</th>
+                            <th id="endTime">End Time</th>
+                            <th id="breakStart">Break Start</th>
+                            <th id="breakEnd">Break end Time</th>
+                            <th id="comment">Comments</th>
+                            <th id="hrsSpent">Hours</th>
+                        </tr>
+    
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>  
 </body>
 </html>

@@ -1,0 +1,123 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.body_container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+#Navbar{
+    background-color: #48BFCC;
+    margin-top: 0;
+    height: 2rem;
+    padding: 5px;
+    
+}
+
+#Navbar h1{
+    float: left;
+    margin: auto;
+}
+#Navbar ul{
+    
+    float: right;
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+#Navbar li{
+    display:inline-block;
+    border-right: 1px solid #bbb;
+    
+}
+
+li a {
+    text-align: center;
+    padding: 14px 16px;
+}
+
+a:hover{
+    background-color: aquamarine;
+}
+
+a:active{
+    color: blueviolet;
+}
+
+td{
+    text-align: center;
+    border: black 1px solid;
+}
+
+#flex-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#container{
+    padding: 10px;
+    margin: 1rem;
+    grid-column-start: 2;
+}
+
+#userdata{
+    display: flex;
+    /* border: black 1px solid; */
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: center;
+}
+
+#userdata div{
+    padding: 5px;
+    margin: 2rem;
+}
+
+#timesheet{
+    margin: 10px;
+}
+
+#timesheet table{
+    border-collapse: collapse;
+    width: 100%;
+}
+#timesheet th{
+    border: black 1px solid;
+}
+
+.wrapper{
+   display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.input_item{
+    margin: auto;
+    margin-top: 1rem;
+}
+
+#timesheetForm div input{
+    width: 7rem;
+}
+
+.texarea_item{
+    display: flex;
+    flex-direction: column;
+    margin: 20%;
+    margin-top: 1rem;
+    margin-bottom: 20px;
+}
+
+#timesheetSubmit{
+    float: right;
+    margin: 1rem;
+}
